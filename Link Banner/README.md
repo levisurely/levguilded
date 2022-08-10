@@ -1,0 +1,1 @@
+Hey! This is What a named "Link Banner" or should I say link everything lol! When You Click on a Banner or Profile Picture in a server or profile it copies it for you! This also uses Toastify!
