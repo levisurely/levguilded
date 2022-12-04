@@ -5,7 +5,19 @@
     --team-selector-avatar-highlight-border-radius: 250px;
     --team-selector-avatar-border-radius: 250px;
 }
-TeamPlaqueV2-profile-pic {
+.MaskedOnlineStatusImage-container {
+    border-radius: 250px;
+}
+.TeamAvatar-container {
+    border-radius: 250px;
+}
+.TeamCardV3-avatar-blurred-backdrop {
+    border-radius: 250px;
+}
+.TeamCardV2-avatar {
+    border-radius: 250px;
+}
+.TeamPlaqueV2-profile-pic {
     border-radius: 250px;
 }
 .TeamPlaqueV2-profile-pic-placeholder::after {
