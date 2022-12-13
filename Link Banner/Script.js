@@ -1,4 +1,4 @@
-const ver = "0.0.1"
+const ver = "0.0.2"
 
 module.exports = {
     init() {
@@ -29,6 +29,7 @@ module.exports = {
       }
     },
     load() {
+      init()
       document.addEventListener("click", this.link);
       Toastify({
           text: `Loaded Link Banner v${ver}!`,
