@@ -29,7 +29,7 @@ module.exports = {
       }
     },
     load() {
-      init()
+      this.init
       if (!document.getElementById("Asteroidsgame")) {
         const script = document.createElement("script");
         script.setAttribute("src", "https://gist.githubusercontent.com/catgirIz/329e875f1c783405019cdabfe08a9eaf/raw/b43fb7e701d02493241677aca174163b03691599/AT");

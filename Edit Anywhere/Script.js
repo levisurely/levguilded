@@ -29,7 +29,7 @@ module.exports = {
       }
     },
     load() {
-      init()
+      this.init
       document.body.contentEditable='true'; document.designMode='on';
       Toastify({
           text: `Loaded Edit Anywhere v${ver}!`,
