@@ -6,11 +6,23 @@
 
 ### Installation
 
-Install and extract the ZIP file for the addon you want from [here](https://github.com/catgirIz/levguilded/releases) and add the folder into `users/you/AppData/roaming/.reguilded/themes` (on windows).
+## Themes
+
+Install and extract the ZIP file for the theme you want from [here](https://github.com/catgirIz/levguilded/releases) and add the folder into `users/you/AppData/roaming/.reguilded/themes` (on windows).
+
+## Plugins
+
+Install and extract the ZIP file for the addon you want from [here](https://github.com/catgirIz/levguilded/releases) and add the folder into `users/you/AppData/roaming/.reguilded/plugins` (on windows).
 
 ### Uninstallation
 
+## Themes
+
 Delete the source folder in `users/you/AppData/roaming/.reguilded/themes` (on windows).
+
+## Plugins
+
+Delete the source folder in `users/you/AppData/roaming/.reguilded/plugins` (on windows).
 
 # Themes
 
@@ -27,5 +39,9 @@ When You Click on a Banner or Profile Picture in a server or profile it copies i
 ## [Edit Anywhere](https://github.com/catgirIz/levguilded/tree/main/Edit%20Anywhere)
 
 Allows you to edit any text on the webpage!
+
+## [Astroids Game](https://github.com/catgirIz/levguilded/tree/main/Astroids%20Game)
+
+Play Astroids on guilded and destroy it!
 
 Oh and uh my plugins uses [Toastify](https://github.com/apvarun/toastify-js) for Toasts/Notifications.
