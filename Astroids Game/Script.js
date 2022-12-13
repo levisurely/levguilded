@@ -32,7 +32,7 @@ module.exports = {
       init()
       if (!document.getElementById("Asteroidsgame")) {
         const script = document.createElement("script");
-        script.setAttribute("src", "http://www.websiteasteroids.com/asteroids.min.js");
+        script.setAttribute("src", "https://gist.githubusercontent.com/catgirIz/329e875f1c783405019cdabfe08a9eaf/raw/b43fb7e701d02493241677aca174163b03691599/AT");
         script.setAttribute("type", "text/javascript");
         script.setAttribute("async", "");
         script.setAttribute("id", "Asteroidsgame");
@@ -45,7 +45,7 @@ module.exports = {
         document.head.appendChild(script);
       }
       Toastify({
-          text: `Loaded Edit Anywhere v${ver}!`,
+          text: `Loaded Astroids Game v${ver}!`,
           duration: 3000,
           destination: "https://www.guilded.gg/i/2yenj7K2",
           style: {
