@@ -10,9 +10,9 @@
 
 Install and extract the ZIP file for the theme you want from [here](https://github.com/catgirIz/levguilded/releases) and add the folder into `users/you/AppData/roaming/.reguilded/themes` (on windows).
 
-### Plugins
+### Addons
 
-Install and extract the ZIP file for the addon you want from [here](https://github.com/catgirIz/levguilded/releases) and add the folder into `users/you/AppData/roaming/.reguilded/plugins` (on windows).
+Install and extract the ZIP file for the addon you want from [here](https://github.com/catgirIz/levguilded/releases) and add the folder into `users/you/AppData/roaming/.reguilded/addons` (on windows).
 
 ## Uninstallation
 
@@ -20,9 +20,9 @@ Install and extract the ZIP file for the addon you want from [here](https://gith
 
 Delete the source folder in `users/you/AppData/roaming/.reguilded/themes` (on windows).
 
-### Plugins
+### Addons
 
-Delete the source folder in `users/you/AppData/roaming/.reguilded/plugins` (on windows).
+Delete the source folder in `users/you/AppData/roaming/.reguilded/addons` (on windows).
 
 # Themes
 
@@ -30,7 +30,7 @@ Delete the source folder in `users/you/AppData/roaming/.reguilded/plugins` (on w
 
 Replaces the lame rounded square server icons with circles! Kinda to give off a cool discord vibe lol.
 
-# Plugins
+# Addons
 
 ## [Link Banner](https://github.com/catgirIz/levguilded/tree/main/Link%20Banner)
 
@@ -44,4 +44,4 @@ Allows you to edit any text on the webpage!
 
 Play [Erik Andersson's Astroids](http://websiteasteroids.com/) on guilded and destroy it! All Credits to Erik Andersson btw.
 
-Oh and uh my plugins uses [Toastify](https://github.com/apvarun/toastify-js) for Toasts/Notifications.
+Oh and uh my addons uses [Toastify](https://github.com/apvarun/toastify-js) for Toasts/Notifications.
