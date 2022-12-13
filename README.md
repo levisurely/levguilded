@@ -42,6 +42,6 @@ Allows you to edit any text on the webpage!
 
 ## [Astroids Game](https://github.com/catgirIz/levguilded/tree/main/Astroids%20Game)
 
-Play Erik Andersson's Astroids on guilded and destroy it! All Credits to Erik Andersson btw.
+Play [Erik Andersson's Astroids](http://websiteasteroids.com/) on guilded and destroy it! All Credits to Erik Andersson btw.
 
 Oh and uh my plugins uses [Toastify](https://github.com/apvarun/toastify-js) for Toasts/Notifications.
