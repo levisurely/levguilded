@@ -22,4 +22,10 @@ Replaces the lame rounded square server icons with circles! Kinda to give off a 
 
 ## [Link Banner](https://github.com/catgirIz/levguilded/tree/main/Link%20Banner)
 
-When You Click on a Banner or Profile Picture in a server or profile it copies it for you! This also uses Toastify!
+When You Click on a Banner or Profile Picture in a server or profile it copies it for you
+
+## [Edit Anywhere](https://github.com/catgirIz/levguilded/tree/main/Edit%20Anywhere)
+
+Allows you to edit any text on the webpage!
+
+Oh and uh my plugins uses [Toastify](https://github.com/apvarun/toastify-js) for Toasts/Notifications.
