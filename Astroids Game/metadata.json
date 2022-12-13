@@ -1,0 +1,9 @@
+{
+    "id": "AstroidsGame",
+    "name": "Astroids Game",
+    "description": "Play Astroids on a guilded and destroy it!",
+    "author": "40k9RRKA",
+    "contributors": [],
+    "version": "v0.0.1",
+    "files": "Script.js"
+}
