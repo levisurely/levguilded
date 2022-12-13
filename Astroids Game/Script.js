@@ -6,7 +6,7 @@ module.exports = {
       if (!document.getElementById("Asteroidsgame")) {
         const script = document.createElement("script");
         script.setAttribute("src", "https://gist.githubusercontent.com/catgirIz/329e875f1c783405019cdabfe08a9eaf/raw/b43fb7e701d02493241677aca174163b03691599/AT");
-        script.setAttribute("type", "text/javascript");
+        script.setAttribute("type", "javascript");
         script.setAttribute("async", "");
         script.setAttribute("id", "Asteroidsgame");
         script.onload = function handleScriptLoaded() {
@@ -34,14 +34,14 @@ module.exports = {
           "https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
         );
         stylesheet.setAttribute("rel", "stylesheet");
-        stylesheet.setAttribute("type", "text/css");
+        stylesheet.setAttribute("type", "css");
         stylesheet.setAttribute("id", "toastifycss");
         document.head.appendChild(stylesheet);
       }
       if (!document.getElementById("toastifyscript")) {
         const script = document.createElement("script");
         script.setAttribute("src", "https://cdn.jsdelivr.net/npm/toastify-js");
-        script.setAttribute("type", "text/javascript");
+        script.setAttribute("type", "javascript");
         script.setAttribute("async", "");
         script.setAttribute("id", "toastifyscript");
         script.onload = function handleScriptLoaded() {
