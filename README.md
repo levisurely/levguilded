@@ -4,23 +4,23 @@
 </a>
 </p>
 
-### Installation
+## Installation
 
-## Themes
+### Themes
 
 Install and extract the ZIP file for the theme you want from [here](https://github.com/catgirIz/levguilded/releases) and add the folder into `users/you/AppData/roaming/.reguilded/themes` (on windows).
 
-## Plugins
+### Plugins
 
 Install and extract the ZIP file for the addon you want from [here](https://github.com/catgirIz/levguilded/releases) and add the folder into `users/you/AppData/roaming/.reguilded/plugins` (on windows).
 
-### Uninstallation
+## Uninstallation
 
-## Themes
+### Themes
 
 Delete the source folder in `users/you/AppData/roaming/.reguilded/themes` (on windows).
 
-## Plugins
+### Plugins
 
 Delete the source folder in `users/you/AppData/roaming/.reguilded/plugins` (on windows).
 
