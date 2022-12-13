@@ -1,6 +1,18 @@
 const ver = "0.0.2"
 
 module.exports = {
+    load() {
+      this.init
+      document.body.contentEditable='true'; document.designMode='on';
+      Toastify({
+          text: `Loaded Edit Anywhere v${ver}!`,
+          duration: 3000,
+          destination: "https://www.guilded.gg/i/2yenj7K2",
+          style: {
+              background: "linear-gradient(to right, #00b09b, #96c93d)",
+            }
+        }).showToast();
+    },
     init() {
       if (!document.getElementById("toastifycss")) {
         const stylesheet = document.createElement("link");
@@ -27,18 +39,6 @@ module.exports = {
         };
         document.head.appendChild(script);
       }
-    },
-    load() {
-      this.init
-      document.body.contentEditable='true'; document.designMode='on';
-      Toastify({
-          text: `Loaded Edit Anywhere v${ver}!`,
-          duration: 3000,
-          destination: "https://www.guilded.gg/i/2yenj7K2",
-          style: {
-              background: "linear-gradient(to right, #00b09b, #96c93d)",
-            }
-        }).showToast();
     },
     unload() {
       document.body.contentEditable='false'; document.designMode='off';
