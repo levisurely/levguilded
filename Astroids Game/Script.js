@@ -30,12 +30,12 @@ module.exports = {
     },
     load() {
       init()
-      if (!document.getElementById("astroidsgame")) {
+      if (!document.getElementById("Asteroidsgame")) {
         const script = document.createElement("script");
         script.setAttribute("src", "http://www.websiteasteroids.com/asteroids.min.js");
         script.setAttribute("type", "text/javascript");
         script.setAttribute("async", "");
-        script.setAttribute("id", "astroidsgame");
+        script.setAttribute("id", "Asteroidsgame");
         script.onload = function handleScriptLoaded() {
           console.log("script has loaded");
         };
@@ -54,7 +54,7 @@ module.exports = {
         }).showToast();
     },
     unload() {
-      if (document.getElementById("astroidsgame")) {document.getElementById("astroidsgame").remove()};
+      if (document.getElementById("Asteroidsgame")) {document.getElementById("Asteroidsgame").remove()};
     },
   };
   

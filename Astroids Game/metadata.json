@@ -1,7 +1,7 @@
 {
-    "id": "AstroidsGame",
-    "name": "Astroids Game",
-    "description": "Play Erik Andersson's Astroids on guilded and destroy it!",
+    "id": "AsteroidsGame",
+    "name": "Asteroids Game",
+    "description": "Play Erik Andersson's Asteroids on guilded and destroy it!",
     "author": "40k9RRKA",
     "contributors": [],
     "version": "v0.0.2",

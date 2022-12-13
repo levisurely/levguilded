@@ -1,1 +1,1 @@
-Hey! Ever wanted to play that astroids game on guilded? Well uh...here lol. Play Erik Andersson's Astroids on guilded and destroy it! All Credits to Erik Andersson btw.
+Hey! Ever wanted to play that asteroids game? Well uh...here lol. Play Erik Andersson's Astroids on and destroy it! All Credits to Erik Andersson btw.
