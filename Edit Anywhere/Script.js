@@ -2,7 +2,7 @@ const ver = "0.0.2"
 
 module.exports = {
   load() {
-    this.Toa
+    this.Toa()
     document.body.contentEditable = 'true'; document.designMode = 'on';
     Toastify({
       text: `Loaded Edit Anywhere v${ver}!`,
@@ -13,7 +13,7 @@ module.exports = {
       }
     }).showToast();
   },
-  init() {this.Toa},
+  init() {},
   unload() {
     document.body.contentEditable = 'false'; document.designMode = 'off';
   },

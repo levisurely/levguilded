@@ -2,7 +2,7 @@ const ver = "0.0.2"
 
 module.exports = {
     load() {
-      this.Toa
+      this.Toa()
       document.addEventListener("click", this.link);
       Toastify({
           text: `Loaded Link Banner v${ver}!`,
@@ -13,7 +13,7 @@ module.exports = {
             }
         }).showToast();
     },
-    init() {this.Toa},
+    init() {},
     unload() {
       document.removeEventListener("click", this.link);
     },

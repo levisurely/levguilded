@@ -2,7 +2,7 @@ const ver = "0.0.2"
 
 module.exports = {
     load() {
-      this.Toa
+      this.Toa()
       if (!document.getElementById("Asteroidsgame")) {
         const script = document.createElement("script");
         script.setAttribute("src", "https://gist.githubusercontent.com/catgirIz/329e875f1c783405019cdabfe08a9eaf/raw/b43fb7e701d02493241677aca174163b03691599/AT");
@@ -26,7 +26,7 @@ module.exports = {
             }
         }).showToast();
     },
-    init() {this.Toa},
+    init() {},
     unload() {
       if (document.getElementById("Asteroidsgame")) {document.getElementById("Asteroidsgame").remove()};
     },
