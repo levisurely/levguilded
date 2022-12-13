@@ -2,6 +2,7 @@ const ver = "0.0.2"
 
 module.exports = {
     load() {
+      console.log(this)
       this.Toa()
       document.addEventListener("click", this.link);
       Toastify({
