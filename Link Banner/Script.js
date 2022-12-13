@@ -29,7 +29,7 @@ module.exports = {
       }
     },
     load() {
-      init()
+      this.init()
       document.addEventListener("click", this.link);
       Toastify({
           text: `Loaded Link Banner v${ver}!`,

@@ -1,46 +1,64 @@
 .AppV2-container-minimal-nav {
     --team-selector-avatar-border-radius: 250px;
 }
+
 .AppV2-container-minimal-nav {
     --team-selector-avatar-highlight-border-radius: 250px;
     --team-selector-avatar-border-radius: 250px;
 }
+
 .MaskedOnlineStatusImage-container {
     border-radius: 250px;
 }
+
 .TeamAvatar-container {
     border-radius: 250px;
 }
+
 .TeamCardV3-avatar-blurred-backdrop {
     border-radius: 250px;
 }
+
 .TeamCardV2-avatar {
     border-radius: 250px;
 }
+
 .TeamPlaqueV2-profile-pic {
     border-radius: 250px;
 }
+
 .TeamPlaqueV2-profile-pic-placeholder::after {
     border-radius: 250px;
 }
-.TeamPlaqueV2-container-desktop .TeamPlaqueV2-profile-pic-placeholder {
+
+.TeamPlaqueV2-container-desktop {
     border-radius: 250px;
 }
+
 .GroupAvatar-icon {
     border-radius: 250px;
 }
+
 .GroupSelectorItem-container {
     --avatar-highlight-border-radius: 250px;
 }
+
 .GroupAvatarTextLabel-layer {
     border-radius: 250px;
 }
+
 .InlineAddItemControl-container {
     --inline-add-item-border-radius: 250px;
 }
+
 .NavV4BadgedItem-container::after {
     border-radius: 250px;
 }
-.NavV4BadgedItem-image, .NavV4BadgedItem-icon-wrapper {
+
+.NavV4BadgedItem-icon-wrapper {
+    border-radius: 250px;
+}
+
+.NavV4BadgedItem-image {
     border-radius: 250px;
 }
