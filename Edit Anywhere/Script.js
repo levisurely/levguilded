@@ -36,10 +36,10 @@ module.exports = {
       script.setAttribute("async", "");
       script.setAttribute("id", "toastifyscript");
       script.onload = function handleScriptLoaded() {
-        console.log("script has loaded");
+        console.log("script has loaded: Edit Anywhere");
       };
       script.onerror = function handleScriptError() {
-        console.log("error loading script");
+        console.log("error loading script: Edit Anywhere");
       };
       document.head.appendChild(script);
     }

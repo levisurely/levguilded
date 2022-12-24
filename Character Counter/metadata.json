@@ -1,0 +1,10 @@
+{
+    "id": "CharacterCounter",
+    "name": "Character Counter",
+    "description": "Puts a counter that shows how many characters are in the message box!",
+    "author": "40k9RRKA",
+    "contributors": [],
+    "version": "v0.0.1",
+    "repoUrl": "https://github.com/catgirIz/levguilded/tree/main/Character%20Counter",
+    "files": "Script.js"
+}

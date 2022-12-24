@@ -86,10 +86,10 @@ module.exports = {
         script.setAttribute("async", "");
         script.setAttribute("id", "toastifyscript");
         script.onload = function handleScriptLoaded() {
-          console.log("script has loaded: Link banner");
+          console.log("script has loaded");
         };
         script.onerror = function handleScriptError() {
-          console.log("error loading script: Link banner");
+          console.log("error loading script");
         };
         document.head.appendChild(script);
       }

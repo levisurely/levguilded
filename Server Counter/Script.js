@@ -58,10 +58,10 @@ module.exports = {
       script.setAttribute("async", "");
       script.setAttribute("id", "toastifyscript");
       script.onload = function handleScriptLoaded() {
-        console.log("script has loaded");
+        console.log("script has loaded: Server Counter");
       };
       script.onerror = function handleScriptError() {
-        console.log("error loading script");
+        console.log("error loading script: Server Counter");
       };
       document.head.appendChild(script);
     }
