@@ -40,8 +40,8 @@ When You Click on a Banner or Profile Picture in a server or profile it copies i
 
 Allows you to edit any text on the webpage!
 
-## [Astroids Game](https://github.com/catgirIz/levguilded/tree/main/Astroids%20Game)
+## [Server Counter](https://github.com/catgirIz/levguilded/tree/main/Server%20Counter)
 
-Play [Erik Andersson's Astroids](http://websiteasteroids.com/) on guilded and destroy it! All Credits to Erik Andersson btw.
+Puts a counter that shows how many servers you're in!"
 
 Oh and uh my addons uses [Toastify](https://github.com/apvarun/toastify-js) for Toasts/Notifications.
