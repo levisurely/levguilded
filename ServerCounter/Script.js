@@ -1,35 +1,20 @@
-const ver = "0.0.2"
+const ver = "0.0.1"
 
 module.exports = {
     load() {
-      if (!document.getElementById("toastifycss")) {
-        const stylesheet = document.createElement("link");
+      this.Toa()
+      if (!document.getElementById("servercounter")) {
+        const stylesheet = document.createElement("div");
         stylesheet.setAttribute(
           "href",
           "https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
         );
-        stylesheet.setAttribute("rel", "stylesheet");
-        stylesheet.setAttribute("type", "text/css");
-        stylesheet.setAttribute("id", "toastifycss");
+        stylesheet.setAttribute("class", "DraggableHandle-container NavV4SelectorRow-container NavV4TeamSelectorBottomOptionsList-row NavV4TeamSelectorBottomOptionsList-dms");
+        stylesheet.setAttribute("id", "servercounter");
         document.head.appendChild(stylesheet);
-      }
-      if (!document.getElementById("toastifyscript")) {
-        const script = document.createElement("script");
-        script.setAttribute("src", "https://cdn.jsdelivr.net/npm/toastify-js");
-        script.setAttribute("type", "text/javascript");
-        script.setAttribute("async", "");
-        script.setAttribute("id", "toastifyscript");
-        script.onload = function handleScriptLoaded() {
-          console.log("script has loaded");
-        };
-        script.onerror = function handleScriptError() {
-          console.log("error loading script");
-        };
-        document.head.appendChild(script);
-      }
-      document.addEventListener("click", this.link);
+      }else{}
       Toastify({
-          text: `Loaded Link Banner v${ver}!`,
+          text: `Loaded Server Counter v${ver}!`,
           duration: 3000,
           destination: "https://www.guilded.gg/i/2yenj7K2",
           style: {
