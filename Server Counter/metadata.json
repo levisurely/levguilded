@@ -1,0 +1,10 @@
+{
+    "id": "ServerCounter",
+    "name": "Server Counter",
+    "description": "Puts a counter that shows how many servers you're in!",
+    "author": "40k9RRKA",
+    "contributors": [],
+    "version": "v0.0.1",
+    "repoUrl": "https://github.com/catgirIz/levguilded/tree/main/Link%20Banner",
+    "files": "Script.js"
+}

@@ -2,7 +2,6 @@ const ver = "0.0.2"
 
 module.exports = {
     load() {
-      console.log(this)
       if (!document.getElementById("toastifycss")) {
         const stylesheet = document.createElement("link");
         stylesheet.setAttribute(
@@ -40,57 +39,6 @@ module.exports = {
     },
     init() {},
     unload() {
-      document.removeEventListener("click", this.link);
-    },
-    link({ target }) {
-      if (
-        target.src &&
-        target.classList &&
-        target.classList.contains("UserProfileBackground-image")
-      ) {
-        let url = target.src;
-        navigator.clipboard.writeText(url);
-        Toastify({
-          text: "Copied Link!",
-          duration: 3000,
-        }).showToast();
-      }
-      if (
-        target.src &&
-        target.classList &&
-        target.classList.contains("UserProfilePictureControl-picture")
-      ) {
-        let url = target.src;
-        navigator.clipboard.writeText(url);
-        Toastify({
-          text: "Copied Link!",
-          duration: 3000,
-        }).showToast();
-      }
-      if (
-        target.src &&
-        target.classList &&
-        target.classList.contains("TeamPlaqueV2-profile-pic")
-      ) {
-        let url = target.src;
-        navigator.clipboard.writeText(url);
-        Toastify({
-          text: "Copied Link!",
-          duration: 3000,
-        }).showToast();
-      }
-      if (
-        target.src &&
-        target.classList &&
-        target.classList.contains("TeamOverviewBanner-banner")
-      ) {
-        let url = target.src;
-        navigator.clipboard.writeText(url);
-        Toastify({
-          text: "Copied Link!",
-          duration: 3000,
-        }).showToast();
-      }
     },
     Toa() {
       if (!document.getElementById("toastifycss")) {
