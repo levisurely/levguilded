@@ -1,4 +1,4 @@
-const ver = "0.0.2"
+const ver = "0.0.1"
 
 module.exports = {
   load() {
