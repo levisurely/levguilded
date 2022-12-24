@@ -1,1 +1,0 @@
-Hey! Ever wanted to play that asteroids game? Well uh...here lol. Play Erik Andersson's Astroids on and destroy it! All Credits to Erik Andersson btw.
