@@ -27,6 +27,15 @@ module.exports = {
         Upd();
       }, 100);
     }
+
+    var waitfortoast = setInterval(function() {
+      if( Toastify == "undefined" || Toastify == null){
+      
+      }else{
+      clearInterval(waitfortoast);
+      }
+      }, 100);
+      
     Toastify({
       text: `Loaded Server Counter v${ver}!`,
       duration: 3000,
