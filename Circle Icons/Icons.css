@@ -62,3 +62,17 @@
 .NavV4BadgedItem-image {
     border-radius: 250px;
 }
+
+.TeamSelectorItem-container {
+    --avatar-size: 28px;
+    --selected-border-width: 3px;
+    --avatar-highlight-buffer: 12px;
+    --avatar-highlight-border-radius: 250px;
+}
+
+.HoverContext-child-content-wrapper {
+    pointer-events: none;
+    -webkit-user-select: none;
+    user-select: none;
+    border-radius: 250px;
+}
