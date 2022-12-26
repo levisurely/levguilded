@@ -4,7 +4,9 @@
     "description": "Allows you to edit any text on the webpage!",
     "author": "40k9RRKA",
     "contributors": [],
-    "version": "v0.0.1",
+    "version": "v0.0.2",
     "repoUrl": "https://github.com/catgirIz/levguilded/tree/main/Edit%20Anywhere",
-    "files": "Script.js"
+    "files": "Script.js",
+    "banner": "./Yes.png",
+    "images": ["./Yes.png"]
 }
