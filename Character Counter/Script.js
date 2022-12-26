@@ -45,7 +45,7 @@ module.exports = {
       }
     }).showToast();
   },
-  init() { },
+  init() { this.Toa() },
   unload() {
     if (document.getElementById("servercounter")) {
       document.getElementById("servercounter").remove();
