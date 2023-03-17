@@ -1,3 +1,5 @@
+![levguilded](https://github.com/horsehair/levguilded/blob/main/lgb.png)
+
 <p align="center">
 <a href="https://www.guilded.gg/i/2yenj7K2">
 <img src="https://img.shields.io/static/v1?label=Chat%20on&message=Guilded&style=flat-square&color=F5C400" alt="Chat on Guilded" />
