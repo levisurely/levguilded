@@ -1,1 +1,1 @@
-Hey! This is What a named "Edit Everywhere". This allows you to edit any text on the webpage.
+Hey! This is What a named "Conceal Filenames". Replace the names of files you upload!
