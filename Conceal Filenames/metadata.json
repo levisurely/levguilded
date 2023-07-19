@@ -1,0 +1,12 @@
+{
+    "id": "ConcealFilenames",
+    "name": "Conceal Filenames",
+    "description": "Replace the names of files you upload!",
+    "author": "40k9RRKA",
+    "contributors": [],
+    "version": "v0.0.1",
+    "repoUrl": "https://github.com/catgirIz/levguilded/tree/main/Conceal%20Filenames",
+    "files": "Script.js",
+    "banner": "./Yes.png",
+    "images": ["./Yes.png"]
+}
