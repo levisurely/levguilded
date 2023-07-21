@@ -1,0 +1,12 @@
+{
+    "id": "OpenInApp",
+    "name": "Open In App",
+    "description": "This will allow you to just open links in guilded.",
+    "author": "40k9RRKA",
+    "contributors": [],
+    "version": "v0.0.1",
+    "repoUrl": "https://github.com/catgirIz/levguilded/tree/main/Server%20Counter",
+    "files": "Script.js",
+    "banner": "./Yes.png",
+    "images": ["./Yes.png"]
+}

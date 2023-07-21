@@ -9,10 +9,7 @@ module.exports = {
         "ReactionsControlV2-container SlateEditor-reactions-control-wrapper"
       );
       charcounter.setAttribute("id", "charcount");
-      document
-        .querySelector(
-          "#app > div > div.ReorderPortalContext-container > div.GameContext-container.GameContext-container-no-game.AppV2-game-context.AppV2-container-minimal-nav.AppV2-electron-windows > div.StatusContext-container.AppV2-container > div.WebAppV2-container.WebAppV2-container-has-sidebar.WebAppV2-container-minimal.WebAppV2-container-electron.WebAppV2-container-electron-windows.WebAppV2-container-has-title-bar > div.LayerContext-container > div.LayerContext-layer-item-wrapper > div > div > div.LayerContext-container.LayeredPageContent-container.LayeredPageContent-container-desktop > div.LayerContext-layer-item-wrapper > div > div.ChannelWrapper-contents.ChannelWrapper-contents-sidebar-collapsed > div > div > div.ChatChannelInput-container > div.Editor-container.Editor-container-type-simple.ChatChannelInput-editor"
-        )
+      document.getElementsByClassName("Editor-container Editor-container-type-simple ChatChannelInput-editor")[1]
         .appendChild(charcounter);
 
       function Upd() {

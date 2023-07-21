@@ -1,0 +1,1 @@
+This will allow you to just open links in guilded.
