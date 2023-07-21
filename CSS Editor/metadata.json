@@ -1,0 +1,12 @@
+{
+    "id": "CSSEditor",
+    "name": "CSS Editor",
+    "description": "Give you the ability to edit CSS!",
+    "author": "40k9RRKA",
+    "contributors": [],
+    "version": "v0.0.1",
+    "repoUrl": "https://github.com/catgirIz/levguilded/tree/main/CSS%20Editor",
+    "files": "Script.js",
+    "banner": "./Yes.png",
+    "images": ["./Yes.png"]
+}
