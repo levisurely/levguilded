@@ -1,4 +1,4 @@
-const ver = "0.0.1";
+const ver = "0.0.2";
 var Toggle = false;
 
 module.exports = {
@@ -30,8 +30,9 @@ module.exports = {
           ) {
             return filename;
           }
-
+          if (Toggle == true) {
           return [REPLACE_WITH, extension].join(".");
+          }else{return filename}
         },
       });
     }
