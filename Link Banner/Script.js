@@ -27,6 +27,19 @@ module.exports = {
   init() {},
   unload() {
     document.removeEventListener("click", this.link);
+    if (typeof Toastify !== "undefined") {
+      const metadata = require(`./metadata.json`);
+      metadata.then(function (result) {
+        Toastify({
+          text: `Unloaded ${result.name} ${result.version}!`,
+          duration: 3000,
+          destination: "https://www.guilded.gg/i/2yenj7K2",
+          style: {
+            background: "linear-gradient(to right, #ff3838, #ff9999)",
+          },
+        }).showToast();
+      });
+    }
   },
   link({ target }) {
     if (
