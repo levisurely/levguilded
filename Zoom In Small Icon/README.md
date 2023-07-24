@@ -1,1 +1,0 @@
-Zooms in on the images that are under the cursor.
