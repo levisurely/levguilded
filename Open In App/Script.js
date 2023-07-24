@@ -2,6 +2,7 @@ var Toggle = false;
 
 module.exports = {
   load() {
+    setTimeout(function () {
     if (typeof Toastify !== "undefined") {
       Toggle = true;
       if (sessionStorage.getItem("previousUrl")) {
@@ -29,6 +30,7 @@ module.exports = {
       this.unload;
       //return false;
     }
+  }, 5000);
   },
   unload() {
     Toggle = false;

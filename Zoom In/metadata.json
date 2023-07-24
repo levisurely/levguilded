@@ -1,0 +1,12 @@
+{
+    "id": "ZoomInSmallIcon",
+    "name": "Zoom In",
+    "description": "Zooms in on the images that are under the cursor!",
+    "author": "40k9RRKA",
+    "contributors": [],
+    "version": "1.0.0",
+    "repoUrl": "https://github.com/catgirIz/levguilded/tree/main/Zoom%20In",
+    "files": "Script.js",
+    "banner": "./Yes.png",
+    "images": ["./Yes.png"]
+}

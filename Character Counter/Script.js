@@ -1,5 +1,6 @@
 module.exports = {
   load() {
+    setTimeout(function () {
     if (typeof Toastify !== "undefined") {
       if (!document.getElementById("charcount")) {
         var charcounter = document.createElement("div");
@@ -95,6 +96,7 @@ module.exports = {
       this.unload;
       //return false;
     }
+  }, 5000);
   },
   unload() {
     if (typeof Toastify !== "undefined") {

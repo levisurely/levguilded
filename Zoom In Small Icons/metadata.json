@@ -1,0 +1,12 @@
+{
+    "id": "ZoomInSmallIcons",
+    "name": "Zoom In Small Icons",
+    "description": "Zooms in on the small images that are under the cursor!",
+    "author": "40k9RRKA",
+    "contributors": [],
+    "version": "1.0.0",
+    "repoUrl": "https://github.com/catgirIz/levguilded/tree/main/Zoom%20In%20Small%20Icons",
+    "files": "Icons.css",
+    "banner": "./Yes.png",
+    "images": ["./Yes.png"]
+}

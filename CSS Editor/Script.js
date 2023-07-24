@@ -2,6 +2,7 @@ var live = false;
 
 module.exports = {
   load() {
+    setTimeout(function () {
     if (typeof Toastify !== "undefined") {
       if (!document.getElementById("outputcss")) {
         var outputDiv = document.createElement("div");
@@ -41,6 +42,7 @@ module.exports = {
       this.unload;
       //return false;
     }
+  }, 5000);
   },
   init() {
     if (!document.getElementById("outputcss")) {

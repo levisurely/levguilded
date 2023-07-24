@@ -1,5 +1,6 @@
 module.exports = {
   load() {
+    setTimeout(function () {
     if (typeof Toastify !== "undefined") {
       document.body.contentEditable = "true";
       document.designMode = "on";
@@ -22,6 +23,7 @@ module.exports = {
       this.unload;
       //return false;
     }
+  }, 5000);
   },
   unload() {
     document.body.contentEditable = "false";

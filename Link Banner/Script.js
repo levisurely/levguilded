@@ -1,7 +1,6 @@
-const ver = "0.0.2";
-
 module.exports = {
   load() {
+    setTimeout(function () {
     if (typeof Toastify !== "undefined") {
       document.addEventListener("click", this.link);
       const metadata = require(`./metadata.json`);
@@ -23,8 +22,8 @@ module.exports = {
       this.unload;
       //return false;
     }
+  }, 5000);
   },
-  init() {},
   unload() {
     document.removeEventListener("click", this.link);
     if (typeof Toastify !== "undefined") {

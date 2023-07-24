@@ -12,7 +12,7 @@ module.exports = {
           duration: 3000,
           destination: "https://www.guilded.gg/i/2yenj7K2",
           style: {
-            background: "linear-gradient(to right, #ff3838, #ff5757)",
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
           },
         }).showToast();
       });
@@ -23,6 +23,14 @@ module.exports = {
     Toa();
     Upd();
     console.log("Sky's Utilities Init!");
+    Toastify({
+      text: `Injected ${result.name} ${result.version}!`,
+      duration: 3000,
+      destination: "https://www.guilded.gg/i/2yenj7K2",
+      style: {
+        background: "linear-gradient(to right, #bb4dff, #dda6ff)",
+      },
+    }).showToast();
   },
   unload() {
     console.log("Sky's Utilities Unloaded!");

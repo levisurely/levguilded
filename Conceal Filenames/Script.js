@@ -2,6 +2,7 @@ var Toggle = false;
 
 module.exports = {
   load() {
+    setTimeout(function () {
     if (typeof Toastify !== "undefined") {
       Toggle = true;
       //on
@@ -58,6 +59,7 @@ module.exports = {
       this.unload;
       //return false;
     }
+  }, 5000);
   },
   unload() {
     //off
