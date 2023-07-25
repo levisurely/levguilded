@@ -1,8 +1,10 @@
 var Toggle = false;
 
+var Alr = 5000;
 module.exports = {
   load() {
     setTimeout(function () {
+      Alr = 0;
     if (typeof Toastify !== "undefined") {
       const metadata = require(`./metadata.json`);
       metadata.then(function (result) {
@@ -76,7 +78,7 @@ module.exports = {
       this.unload;
       //return false;
     }
-  }, 5000);
+  }, Alr);
   },
   unload() {
     Toggle = false;
@@ -106,7 +108,8 @@ async function Overlay(Text, Link) {
   if (!document.getElementById("Neededoverlay")) {
     // Create the overlay element
     const overlay = document.createElement("div");
-    overlay.style.position = "fixed";
+        overlay.style.position = "fixed";
+    overlay.id = "Neededoverlay";
     overlay.style.top = "50%";
     overlay.style.left = "50%";
     overlay.style.transform = "translate(-50%, -50%)";

@@ -17,7 +17,6 @@ module.exports = {
         }).showToast();
       });
     }
-    
   },
   init() {
     Toa();
@@ -63,6 +62,8 @@ async function Check4Upd(url) {
   }
 }
 
+var UpdLog = [];
+
 async function Upd() {
   const strings = [
     "Sky's Utilities",
@@ -87,10 +88,14 @@ async function Upd() {
       Check4Upd(thingy).then((rawContent) => {
         const RawVer = JSON.parse(rawContent).version;
         if (result.version !== RawVer) {
+          UpdLog.push(`${string}`);
           console.log(
             `UPDATE NEEDED OF ${string}! [YOURS: ${result.version} -> CURRENT: ${RawVer}]`
           );
-          Overlay(`UPDATE NEEDED OF ${string}! [YOURS: ${result.version} -> CURRENT: ${RawVer}]`, `https://github.com/catgirIz/levguilded/releases/tag/Stuff`);
+          Overlay(
+            `UPDATE NEEDED OF ${string}! [YOURS: ${result.version} -> CURRENT: ${RawVer}]`,
+            `https://github.com/catgirIz/levguilded/releases/tag/Stuff`
+          );
         } else {
           console.log(
             `YOU'RE RUNNING THE NEWEST VERISON OF ${string}! [YOURS: ${result.version} -> CURRENT: ${RawVer}]`
@@ -103,13 +108,14 @@ async function Upd() {
 }
 
 async function Overlay(Text, Link) {
-  if (document.getElementById("Neededoverlay")) {
-    document.getElementById("Neededoverlay").remove();
+  if (document.getElementById("Updoverlay")) {
+    document.getElementById("Updoverlay").remove();
   }
-  if (!document.getElementById("Neededoverlay")) {
+  if (!document.getElementById("Updoverlay")) {
     // Create the overlay element
     const overlay = document.createElement("div");
     overlay.style.position = "fixed";
+    overlay.id = "Updoverlay";
     overlay.style.top = "50%";
     overlay.style.left = "50%";
     overlay.style.transform = "translate(-50%, -50%)";
@@ -177,7 +183,6 @@ async function Overlay(Text, Link) {
     document.body.appendChild(overlay);
   }
 }
-
 
 function Toa() {
   if (!document.getElementById("toastifycss")) {
