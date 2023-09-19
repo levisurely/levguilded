@@ -84,7 +84,7 @@ async function Upd() {
     metadata.then(function (result) {
       const url = new URL(`${result.repoUrl}`);
       const path = decodeURIComponent(url.pathname.split("/").pop());
-      const thingy = `https://raw.githubusercontent.com/catgirIz/levguilded/main/${path}/metadata.json`;
+      const thingy = `https://raw.githubusercontent.com/skyallaround/levguilded/main/${path}/metadata.json`;
       Check4Upd(thingy).then((rawContent) => {
         const RawVer = JSON.parse(rawContent).version;
         if (result.version !== RawVer) {
@@ -94,7 +94,7 @@ async function Upd() {
           );
           Overlay(
             `UPDATE NEEDED OF ${string}! [YOURS: ${result.version} -> CURRENT: ${RawVer}]`,
-            `https://github.com/catgirIz/levguilded/releases/tag/Stuff`
+            `https://github.com/skyallaround/levguilded/releases/tag/Stuff`
           );
         } else {
           console.log(

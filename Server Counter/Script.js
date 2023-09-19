@@ -73,7 +73,7 @@ module.exports = {
     } else {
       Overlay(
         "Sky's Utilities Addon Is Required For This Addon To Run!",
-        "https://github.com/catgirIz/levguilded/releases/download/Stuff/Sky.s.Utilities.zip"
+        "https://github.com/skyallaround/levguilded/releases/download/Stuff/Sky.s.Utilities.zip"
       );
       this.unload;
       //return false;
