@@ -20,7 +20,14 @@ module.exports = {
         "ReactionIcon-image ReactionRenderer ReactionRenderer-image",
         "ReactionRenderer-image",
         "NavV4SelectorRow-icon-container",
-        "NavV4SelectorRow-icon"
+        "NavV4SelectorRow-icon",
+        "TeamOverviewBanner-banner TeamPageBanner-overview-banner",
+        "TeamPageBanner-overview-bannMediaRenderer-content MediaRenderer-content-editor-simple MaximizableImage-imageer",
+        "TeamOverviewBanner-banner",
+        "TeamPlaqueV2-profile-pic",
+        "MediaRenderer-content MediaRenderer-content-editor-default MaximizableImage-image",
+        "MaximizedImageOverlay-image",
+        "MediaRenderer-content MediaRenderer-content-editor-simple MaximizableImage-image",
       ];
       const textStyle = `
   .zoomin-canvas {
