@@ -1,11 +1,11 @@
 {
-    "id": "CSSEditor",
-    "name": "CSS Editor",
+    "id": "CSSEditorDev",
+    "name": "CSS Editor - Dev",
     "description": "Give you the ability to edit CSS!",
     "author": "40k9RRKA",
-    "contributors": [],
-    "version": "1.0.5",
-    "repoUrl": "https://github.com/skyallaround/levguilded/tree/main/CSS%20Editor",
+    "contributors": ["kdKjQl54"],
+    "version": "1.1.0",
+    "repoUrl": "https://github.com/Tensounder54/levguilded/tree/main/CSS%20Editor",
     "files": "Script.js",
     "banner": "./Yes.png",
     "images": ["./Yes.png"]

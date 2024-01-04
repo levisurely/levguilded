@@ -195,6 +195,9 @@ async function btn() {
       "#app > div > div.ReorderPortalContext-container > div.GameContext-container.GameContext-container-no-game.AppV2-game-context.AppV2-container-minimal-nav.AppV2-electron-windows > div.OverlayStackProvider-container > div.PortalTarget-container.OverlayStackProvider-portal-target > span > div.StatusContext-container.Overlay-status-context > div > div.StatusContext-container.ModalV2-modal-content.ModalV2-modal-content-scrollable > div > div > div > div.StatusContext-container.OptionsMenu-option-content.OptionsMenu-option-content-thick-scrollbar > div"
     );
 
+    editorContainer.padding = "24px"
+    editorContainer.margin = "0 24px"
+
     if (!document.getElementById("outputcss")) {
       var outputDiv = document.createElement("div");
       outputDiv.id = "outputcss";
@@ -203,6 +206,21 @@ async function btn() {
         outputDiv.innerHTML =
           "<style>" + localStorage.getItem("outputcss") + "</style>";
       }
+    }
+
+    if (!document.getElementById("editor-title")) {
+      var editorPageTitle = document.createElement("div")
+      editorPageTitle.id = "editor-title";
+      editorPageTitle.textContent = "CSS Editor";
+      editorPageTitle.classList.add(
+        "GuildedText-container",
+        "GuildedText-container-type-heading3",
+        "GuildedText-container-block",
+        "SettingsHeaderWithButton-header",
+        "FormHeader-container",
+        "Form-header"
+      )
+      editorContainer.appendChild(editorPageTitle)
     }
 
     // Create CSS textarea
@@ -219,7 +237,23 @@ async function btn() {
       cssTextarea.style.padding = "10px";
       cssTextarea.style.width = "1110px";
       cssTextarea.style.height = "603px";
+      cssTextarea.classList.add(
+        "FormFieldWrapper-container",
+        "FormSection-row-item"
+      )
       editorContainer.appendChild(cssTextarea);
+    }
+
+    if (!document.getElementById("css-buttons")) {
+      var cssButtonsList = document.createElement("div");
+      cssButtonsList.id = "css-buttons";
+      cssButtonsList.classList.add(
+        "FormSection-container",
+        "FormSection-container-section-border",
+        "Form-section"
+      )
+      cssButtonsList.style.padding = "10px 0"
+      editorContainer.appendChild(cssButtonsList)
     }
 
     // Create Apply CSS button
@@ -231,7 +265,8 @@ async function btn() {
       applyButton.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
       applyButton.style.borderRadius = "5px";
       applyButton.style.padding = "10px 20px";
-      editorContainer.appendChild(applyButton);
+      applyButton.style.margin = "0 10px";
+      cssButtonsList.appendChild(applyButton);
     }
 
     // Create Clear CSS button
@@ -243,7 +278,8 @@ async function btn() {
       ClearButton.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
       ClearButton.style.borderRadius = "5px";
       ClearButton.style.padding = "10px 20px";
-      editorContainer.appendChild(ClearButton);
+      ClearButton.style.margin = "0 10px";
+      cssButtonsList.appendChild(ClearButton);
     }
 
     // Create Live CSS button
@@ -255,7 +291,8 @@ async function btn() {
       LiveButton.style.backgroundColor = "rgba(255, 0, 0, 0.5)";
       LiveButton.style.borderRadius = "5px";
       LiveButton.style.padding = "10px 20px";
-      editorContainer.appendChild(LiveButton);
+      LiveButton.style.margin = "0 10px";
+      cssButtonsList.appendChild(LiveButton);
     }
 
     // LIVE CSS from the editor to the output div
