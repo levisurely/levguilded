@@ -158,6 +158,7 @@ async function Overlay(Text, Link) {
 }
 
 async function btn() {
+  //insertStyle()
   if (document.getElementById("cssbtn")) {
     document.getElementById("cssbtn").remove();
   }
@@ -195,9 +196,6 @@ async function btn() {
       "#app > div > div.ReorderPortalContext-container > div.GameContext-container.GameContext-container-no-game.AppV2-game-context.AppV2-container-minimal-nav.AppV2-electron-windows > div.OverlayStackProvider-container > div.PortalTarget-container.OverlayStackProvider-portal-target > span > div.StatusContext-container.Overlay-status-context > div > div.StatusContext-container.ModalV2-modal-content.ModalV2-modal-content-scrollable > div > div > div > div.StatusContext-container.OptionsMenu-option-content.OptionsMenu-option-content-thick-scrollbar > div"
     );
 
-    editorContainer.padding = "24px"
-    editorContainer.margin = "0 24px"
-
     if (!document.getElementById("outputcss")) {
       var outputDiv = document.createElement("div");
       outputDiv.id = "outputcss";
@@ -208,92 +206,34 @@ async function btn() {
       }
     }
 
-    if (!document.getElementById("editor-title")) {
-      var editorPageTitle = document.createElement("div")
-      editorPageTitle.id = "editor-title";
-      editorPageTitle.textContent = "CSS Editor";
-      editorPageTitle.classList.add(
-        "GuildedText-container",
-        "GuildedText-container-type-heading3",
-        "GuildedText-container-block",
-        "SettingsHeaderWithButton-header",
-        "FormHeader-container",
-        "Form-header"
-      )
-      editorContainer.appendChild(editorPageTitle)
+    if (!document.getElementById("pageStyling")) {
+      var pageStyling = document.createElement("style");
+      pageStyling.id = "pageStyling";
+      document.body.append(pageStyling);
     }
 
-    // Create CSS textarea
-    if (!document.getElementById("css-editor")) {
-      var cssTextarea = document.createElement("textarea");
-      cssTextarea.contenteditable = "true";
-      cssTextarea.id = "css-editor";
-      cssTextarea.placeholder = "Enter CSS code here...";
-      cssTextarea.style.border = "1px solid white";
-      cssTextarea.style.borderRadius = "5px";
-      cssTextarea.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-      cssTextarea.style.color = "white";
-      cssTextarea.style.resize = "both";
-      cssTextarea.style.padding = "10px";
-      cssTextarea.style.width = "1110px";
-      cssTextarea.style.height = "603px";
-      cssTextarea.classList.add(
-        "FormFieldWrapper-container",
-        "FormSection-row-item"
-      )
-      editorContainer.appendChild(cssTextarea);
-    }
+    editorContainer.innerHTML = `<div class="Form-container Form-container-section-border">
+  <div class="FormHeader-container Form-header" style="padding-left: 32px; padding-right: 32px; margin-bottom: 12px; font-size: 15px; line-height: 21px; color: #fff; font-weight: bold; user-select: none">CSS Editor</div>
+  <div class="Form-content">
+    <div class="FormSection-container FormSection-container-section-border Form-section">
+      <div class="FormSection-row FormSection-row-margin-md" style="padding-left: 32px; padding-right: 32px;     display: flex; flex-direction: row; flex: 0 0 auto; align-items: center; width: 100%;">
+        <textarea id="css-editor" placeholder="Enter CSS code here..." style="border: 1px solid white; border-radius: 5px; background-color: rgba(0, 0, 0, 0.5); color: white; resize: both; padding: 10px; width: 1110px; height: 603px"></textarea>
+      </div>
+      <div class="FormSection-row FormSection-row-margin-md" style="padding-top: 10px; margin-top: 16px; padding-left: 32px; padding-right: 32px; display: flex; flex-direction: row; flex: 0 0 auto; align-items: center; width: 100%">
+        <button id="apply" class="FormConfirmButtonV2-container FormConfirmButtonV2-container-desktop FormConfirmButtonV2-container-hollow FormConfirmButtonV2-container-default FormConfirmButtonV2-container-size-md FormConfirmButtonV2-container-type-white" style="position: relative; border-color: #fff; border-radius: 4px; border: solid 1px #f5c400; background: none; box-shadow: none; padding: 7px 16px; display: inline-block; outline: inherit !important; flex-shrink: 0; transition: box-shadow 220ms ease-out,border-color 220ms ease-out,color 220ms ease-out,background-color 220ms ease-out,background-position 220ms ease-out; -webkit-user-select: none; user-select: none; font-family: inherit; font-size: inherit; line-height: inherit; -webkit-appearance: button; cursor: pointer; text-transform: none; overflow: visible;margin: 0; font: inherit">Apply CSS</button>
+        <button id="Clear" class="FormConfirmButtonV2-container FormConfirmButtonV2-container-desktop FormConfirmButtonV2-container-hollow FormConfirmButtonV2-container-default FormConfirmButtonV2-container-size-md FormConfirmButtonV2-container-type-white" style="position: relative; border-color: #fff; border-radius: 4px; border: solid 1px #f5c400; background: none; box-shadow: none; padding: 7px 16px; display: inline-block; outline: inherit !important; flex-shrink: 0; transition: box-shadow 220ms ease-out,border-color 220ms ease-out,color 220ms ease-out,background-color 220ms ease-out,background-position 220ms ease-out; -webkit-user-select: none; user-select: none; font-family: inherit; font-size: inherit; line-height: inherit; -webkit-appearance: button; cursor: pointer; text-transform: none; overflow: visible;margin: 0; font: inherit">Clear CSS</button>
+        <button id="Live" class="FormConfirmButtonV2-container FormConfirmButtonV2-container-desktop FormConfirmButtonV2-container-hollow FormConfirmButtonV2-container-default FormConfirmButtonV2-container-size-md FormConfirmButtonV2-container-type-white" style="position: relative; border-color: #fff; border-radius: 4px; border: solid 1px #f5c400; background: none; box-shadow: none; padding: 7px 16px; display: inline-block; outline: inherit !important; flex-shrink: 0; transition: box-shadow 220ms ease-out,border-color 220ms ease-out,color 220ms ease-out,background-color 220ms ease-out,background-position 220ms ease-out; -webkit-user-select: none; user-select: none; font-family: inherit; font-size: inherit; line-height: inherit; -webkit-appearance: button; cursor: pointer; text-transform: none; overflow: visible;margin: 0; font: inherit; background-color: rgba(255, 0, 0, 0.5)">Live: OFF</button>
+      </div>
+    </div>
+  </div>
+</div>`
 
-    if (!document.getElementById("css-buttons")) {
-      var cssButtonsList = document.createElement("div");
-      cssButtonsList.id = "css-buttons";
-      cssButtonsList.classList.add(
-        "FormSection-container",
-        "FormSection-container-section-border",
-        "Form-section"
-      )
-      cssButtonsList.style.padding = "10px 0"
-      editorContainer.appendChild(cssButtonsList)
-    }
-
-    // Create Apply CSS button
-    if (!document.getElementById("apply")) {
-      var applyButton = document.createElement("button");
-      applyButton.id = "apply";
-      applyButton.textContent = "Apply CSS";
-      applyButton.style.color = "white";
-      applyButton.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-      applyButton.style.borderRadius = "5px";
-      applyButton.style.padding = "10px 20px";
-      applyButton.style.margin = "0 10px";
-      cssButtonsList.appendChild(applyButton);
-    }
-
-    // Create Clear CSS button
-    if (!document.getElementById("Clear")) {
-      var ClearButton = document.createElement("button");
-      ClearButton.id = "Clear";
-      ClearButton.textContent = "Clear CSS";
-      ClearButton.style.color = "white";
-      ClearButton.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-      ClearButton.style.borderRadius = "5px";
-      ClearButton.style.padding = "10px 20px";
-      ClearButton.style.margin = "0 10px";
-      cssButtonsList.appendChild(ClearButton);
-    }
-
-    // Create Live CSS button
-    if (!document.getElementById("Live")) {
-      var LiveButton = document.createElement("button");
-      LiveButton.id = "Live";
-      LiveButton.textContent = "Live: OFF";
-      LiveButton.style.color = "white";
-      LiveButton.style.backgroundColor = "rgba(255, 0, 0, 0.5)";
-      LiveButton.style.borderRadius = "5px";
-      LiveButton.style.padding = "10px 20px";
-      LiveButton.style.margin = "0 10px";
-      cssButtonsList.appendChild(LiveButton);
-    }
+    // editorContainer.parentElement.className = "";
+    // editorContainer.parentElement.classList.add(
+    //   "StatusContext-container",
+    //   "OptionsMenu-option-content",
+    //   "OptionsMenu-option-content-thick-scrollbar"
+    // )
 
     // LIVE CSS from the editor to the output div
     document.getElementById("Live").addEventListener("click", function () {
