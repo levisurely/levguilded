@@ -44,6 +44,14 @@ Allows you to edit any text on the webpage!
 
 ## [Server Counter](https://github.com/skyallaround/levguilded/tree/main/Server%20Counter)
 
-Puts a counter that shows how many servers you're in!"
+Puts a counter that shows how many servers you're in!
+
+## [Conceal Filenames](https://github.com/skyallaround/levguilded/blob/main/Conceal%20Filenames)
+
+Replace the names of files you upload!
+
+## [CSS Editor](https://github.com/skyallaround/levguilded/tree/main/CSS%20Editor)
+
+Gives you the ability to edit CSS!
 
 Oh and uh my addons uses [Toastify](https://github.com/apvarun/toastify-js) for Toasts/Notifications.
