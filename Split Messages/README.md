@@ -1,0 +1,1 @@
+Splits long messages into different parts and sends them.
