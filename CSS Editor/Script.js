@@ -178,22 +178,57 @@ async function btn() {
   newbtn.parentNode.setAttribute("data-name", "lgcssbtn");
   newbtn.innerHTML = "CSS Editor";
 
-  clone.addEventListener("mouseenter", function () {
-    clone.style.backgroundColor = "rgba(255, 255, 255, 0.075)";
-  });
-  clone.addEventListener("mouseleave", function () {
-    clone.style.backgroundColor = "";
-  });
+  var inUse = false;
+
   clone.addEventListener("click", function () {
+
+    inUse = true;
+
+    clone.classList.add("DesktopOptionsControlItemTemplate-container-active");
+    console.log("Added active desplay to css button.");
+
     var slide = document.querySelector(
       "#app > div > div.ReorderPortalContext-container > div.GameContext-container.GameContext-container-no-game.AppV2-game-context.AppV2-container-minimal-nav.AppV2-electron-windows > div.OverlayStackProvider-container > div.PortalTarget-container.OverlayStackProvider-portal-target > span > div.StatusContext-container.Overlay-status-context > div > div.StatusContext-container.ModalV2-modal-content.ModalV2-modal-content-scrollable > div > div > div > div.StatusContext-container.OptionsMenu-option-content.OptionsMenu-option-content-thick-scrollbar > div > div"
     );
     if (slide !== null) {
-      slide.remove();
+      console.log(slide)
+      slide.style.display = "none";
+      console.log("Removed")
     }
+
+    var optionsGroupsList = document.getElementsByClassName("PersistentActionMenuItem-container")
+
+    for (let i = 0; i < optionsGroupsList.length; i++) {
+      if (optionsGroupsList[i].id == "cssbtn") {
+        break;
+      } else {
+        optionsGroupsList[i].addEventListener("click", function () {
+          clone.classList.remove("DesktopOptionsControlItemTemplate-container-active");
+          slide.style.display = "block";
+          console.log(slide)
+          console.log("Removed active desplay from css button.")
+          newDiv.remove();
+          this.children[0].children[0].classList.add("DesktopOptionsControlItemTemplate-container-active");
+        });
+      }
+    }
+
+    for (let i = 0; i < optionsGroupsList.length; i++) {
+      if (optionsGroupsList[i].id == "cssbtn") {
+        break;
+      } else {
+        optionsGroupsList[i].children[0].children[0].classList.remove("DesktopOptionsControlItemTemplate-container-active");
+        console.log("Removed active desplay from the following button.");
+        console.log(optionsGroupsList[i]);
+      }
+    }
+
+    const newDiv = document.createElement("div");
+    newDiv.id = "fill"
+
     var editorContainer = document.querySelector(
       "#app > div > div.ReorderPortalContext-container > div.GameContext-container.GameContext-container-no-game.AppV2-game-context.AppV2-container-minimal-nav.AppV2-electron-windows > div.OverlayStackProvider-container > div.PortalTarget-container.OverlayStackProvider-portal-target > span > div.StatusContext-container.Overlay-status-context > div > div.StatusContext-container.ModalV2-modal-content.ModalV2-modal-content-scrollable > div > div > div > div.StatusContext-container.OptionsMenu-option-content.OptionsMenu-option-content-thick-scrollbar > div"
-    );
+    ).appendChild(newDiv);
 
     if (!document.getElementById("outputcss")) {
       var outputDiv = document.createElement("div");
