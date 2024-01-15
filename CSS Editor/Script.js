@@ -185,15 +185,12 @@ async function btn() {
     inUse = true;
 
     clone.classList.add("DesktopOptionsControlItemTemplate-container-active");
-    console.log("Added active desplay to css button.");
 
     var slide = document.querySelector(
       "#app > div > div.ReorderPortalContext-container > div.GameContext-container.GameContext-container-no-game.AppV2-game-context.AppV2-container-minimal-nav.AppV2-electron-windows > div.OverlayStackProvider-container > div.PortalTarget-container.OverlayStackProvider-portal-target > span > div.StatusContext-container.Overlay-status-context > div > div.StatusContext-container.ModalV2-modal-content.ModalV2-modal-content-scrollable > div > div > div > div.StatusContext-container.OptionsMenu-option-content.OptionsMenu-option-content-thick-scrollbar > div > div"
     );
     if (slide !== null) {
-      console.log(slide)
       slide.style.display = "none";
-      console.log("Removed")
     }
 
     var optionsGroupsList = document.getElementsByClassName("PersistentActionMenuItem-container")
@@ -205,8 +202,6 @@ async function btn() {
         optionsGroupsList[i].addEventListener("click", function () {
           clone.classList.remove("DesktopOptionsControlItemTemplate-container-active");
           slide.style.display = "block";
-          console.log(slide)
-          console.log("Removed active desplay from css button.")
           newDiv.remove();
           this.children[0].children[0].classList.add("DesktopOptionsControlItemTemplate-container-active");
         });
@@ -218,8 +213,6 @@ async function btn() {
         break;
       } else {
         optionsGroupsList[i].children[0].children[0].classList.remove("DesktopOptionsControlItemTemplate-container-active");
-        console.log("Removed active desplay from the following button.");
-        console.log(optionsGroupsList[i]);
       }
     }
 
