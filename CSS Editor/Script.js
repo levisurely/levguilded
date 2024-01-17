@@ -178,22 +178,50 @@ async function btn() {
   newbtn.parentNode.setAttribute("data-name", "lgcssbtn");
   newbtn.innerHTML = "CSS Editor";
 
-  clone.addEventListener("mouseenter", function () {
-    clone.style.backgroundColor = "rgba(255, 255, 255, 0.075)";
-  });
-  clone.addEventListener("mouseleave", function () {
-    clone.style.backgroundColor = "";
-  });
+  var inUse = false;
+
   clone.addEventListener("click", function () {
+
+    inUse = true;
+
+    clone.classList.add("DesktopOptionsControlItemTemplate-container-active");
+
     var slide = document.querySelector(
       "#app > div > div.ReorderPortalContext-container > div.GameContext-container.GameContext-container-no-game.AppV2-game-context.AppV2-container-minimal-nav.AppV2-electron-windows > div.OverlayStackProvider-container > div.PortalTarget-container.OverlayStackProvider-portal-target > span > div.StatusContext-container.Overlay-status-context > div > div.StatusContext-container.ModalV2-modal-content.ModalV2-modal-content-scrollable > div > div > div > div.StatusContext-container.OptionsMenu-option-content.OptionsMenu-option-content-thick-scrollbar > div > div"
     );
     if (slide !== null) {
-      slide.remove();
+      slide.style.display = "none";
     }
+
+    var optionsGroupsList = document.getElementsByClassName("PersistentActionMenuItem-container")
+
+    for (let i = 0; i < optionsGroupsList.length; i++) {
+      if (optionsGroupsList[i].id == "cssbtn") {
+        break;
+      } else {
+        optionsGroupsList[i].addEventListener("click", function () {
+          clone.classList.remove("DesktopOptionsControlItemTemplate-container-active");
+          slide.style.display = "block";
+          newDiv.remove();
+          this.children[0].children[0].classList.add("DesktopOptionsControlItemTemplate-container-active");
+        });
+      }
+    }
+
+    for (let i = 0; i < optionsGroupsList.length; i++) {
+      if (optionsGroupsList[i].id == "cssbtn") {
+        break;
+      } else {
+        optionsGroupsList[i].children[0].children[0].classList.remove("DesktopOptionsControlItemTemplate-container-active");
+      }
+    }
+
+    const newDiv = document.createElement("div");
+    newDiv.id = "fill"
+
     var editorContainer = document.querySelector(
       "#app > div > div.ReorderPortalContext-container > div.GameContext-container.GameContext-container-no-game.AppV2-game-context.AppV2-container-minimal-nav.AppV2-electron-windows > div.OverlayStackProvider-container > div.PortalTarget-container.OverlayStackProvider-portal-target > span > div.StatusContext-container.Overlay-status-context > div > div.StatusContext-container.ModalV2-modal-content.ModalV2-modal-content-scrollable > div > div > div > div.StatusContext-container.OptionsMenu-option-content.OptionsMenu-option-content-thick-scrollbar > div"
-    );
+    ).appendChild(newDiv);
 
     if (!document.getElementById("outputcss")) {
       var outputDiv = document.createElement("div");
@@ -205,30 +233,29 @@ async function btn() {
       }
     }
 
-    editorContainer.innerHTML = `<div class="Form-container Form-container-section-border" style="display: flex; flex-direction: column; align-items: center;">
-    <div class="FormHeader-container Form-header" style="padding-left: 32px; padding-right: 32px; margin-bottom: 12px; font-size: 15px; line-height: 21px; color: #fff; font-weight: bold; user-select: none">CSS Editor</div>
-    
-    <div class="FormSection-container FormSection-container-section-border Form-section" style="display: flex; flex-direction: row; width: 100%;">
-  
-      <div class="FormSection-row FormSection-row-margin-md" style="padding-left: 32px; padding-right: 32px; display: flex; flex-direction: column; flex: 0 0 auto; align-items: center; width: 50%;">
-        <textarea id="css-editor" placeholder="Enter CSS code here..." style="border: 1px solid white; border-radius: 5px; background-color: rgba(0, 0, 0, 0.5); color: white; resize: both; padding: 10px; width: 90%; height: 60vh; overflow: auto"></textarea>
-        <div class="FormSection-row FormSection-row-margin-md" style="padding-top: 10px; margin-top: 16px; display: flex; flex-direction: row; flex: 0 0 auto; align-items: center; width: 100%;">
-          <button id="Save" class="FormConfirmButtonV2-container FormConfirmButtonV2-container-desktop FormConfirmButtonV2-container-hollow FormConfirmButtonV2-container-default FormConfirmButtonV2-container-size-md FormConfirmButtonV2-container-type-white" style="position: relative; border-color: #fff; border-radius: 4px; border: solid 1px #fff; background: none; box-shadow: none; padding: 7px 16px; display: inline-block; outline: inherit !important; flex-shrink: 0; transition: box-shadow 220ms ease-out,border-color 220ms ease-out,color 220ms ease-out,background-color 220ms ease-out,background-position 220ms ease-out; -webkit-user-select: none; user-select: none; font-family: inherit; font-size: inherit; line-height: inherit; -webkit-appearance: button; cursor: pointer; text-transform: none; overflow: visible; margin-right: 5px; font: inherit">Save To File</button>
-          <button id="Load" class="FormConfirmButtonV2-container FormConfirmButtonV2-container-desktop FormConfirmButtonV2-container-hollow FormConfirmButtonV2-container-default FormConfirmButtonV2-container-size-md FormConfirmButtonV2-container-type-white" style="position: relative; border-color: #fff; border-radius: 4px; border: solid 1px #fff; background: none; box-shadow: none; padding: 7px 16px; display: inline-block; outline: inherit !important; flex-shrink: 0; transition: box-shadow 220ms ease-out,border-color 220ms ease-out,color 220ms ease-out,background-color 220ms ease-out,background-position 220ms ease-out; -webkit-user-select: none; user-select: none; font-family: inherit; font-size: inherit; line-height: inherit; -webkit-appearance: button; cursor: pointer; text-transform: none; overflow: visible; margin-right: 5px; font: inherit">Load File</button>
-          <button id="apply" class="FormConfirmButtonV2-container FormConfirmButtonV2-container-desktop FormConfirmButtonV2-container-hollow FormConfirmButtonV2-container-default FormConfirmButtonV2-container-size-md FormConfirmButtonV2-container-type-white" style="position: relative; border-color: #fff; border-radius: 4px; border: solid 1px #fff; background: none; box-shadow: none; padding: 7px 16px; display: inline-block; outline: inherit !important; flex-shrink: 0; transition: box-shadow 220ms ease-out,border-color 220ms ease-out,color 220ms ease-out,background-color 220ms ease-out,background-position 220ms ease-out; -webkit-user-select: none; user-select: none; font-family: inherit; font-size: inherit; line-height: inherit; -webkit-appearance: button; cursor: pointer; text-transform: none; overflow: visible; margin-right: 5px; font: inherit">Apply CSS</button>
-          <button id="Clear" class="FormConfirmButtonV2-container FormConfirmButtonV2-container-desktop FormConfirmButtonV2-container-hollow FormConfirmButtonV2-container-default FormConfirmButtonV2-container-size-md FormConfirmButtonV2-container-type-white" style="position: relative; border-color: #fff; border-radius: 4px; border: solid 1px #fff; background: none; box-shadow: none; padding: 7px 16px; display: inline-block; outline: inherit !important; flex-shrink: 0; transition: box-shadow 220ms ease-out,border-color 220ms ease-out,color 220ms ease-out,background-color 220ms ease-out,background-position 220ms ease-out; -webkit-user-select: none; user-select: none; font-family: inherit; font-size: inherit; line-height: inherit; -webkit-appearance: button; cursor: pointer; text-transform: none; overflow: visible; margin-right: 5px; font: inherit">Clear CSS</button>
-          <button id="Live" class="FormConfirmButtonV2-container FormConfirmButtonV2-container-desktop FormConfirmButtonV2-container-hollow FormConfirmButtonV2-container-default FormConfirmButtonV2-container-size-md FormConfirmButtonV2-container-type-white" style="position: relative; border-color: #fff; border-radius: 4px; border: solid 1px #fff; background: none; box-shadow: none; padding: 7px 16px; display: inline-block; outline: inherit !important; flex-shrink: 0; transition: box-shadow 220ms ease-out,border-color 220ms ease-out,color 220ms ease-out,background-color 220ms ease-out,background-position 220ms ease-out; -webkit-user-select: none; user-select: none; font-family: inherit; font-size: inherit; line-height: inherit; -webkit-appearance: button; cursor: pointer; text-transform: none; overflow: visible; margin-right: 5px; font: inherit; background-color: rgba(255, 0, 0, 0.5)">Live: OFF</button>
+    editorContainer.innerHTML = `<div class="Form-container Form-container-section-border">
+  <div class="FormHeader-container Form-header" style="padding-left: 32px; padding-right: 32px; margin-bottom: 12px; font-size: 15px; line-height: 21px; color: #fff; font-weight: bold; user-select: none">CSS Editor</div>
+    <div class="Form-content">
+        <div class="FormSection-container FormSection-container-section-border Form-section">
+            <div class="FormSection-row FormSection-row-margin-md" style="margin-left: 32px; padding-left: 0; padding-right: 32px; display: flex; flex-direction: row; flex: 0 0 auto; align-items: center; width: 100%; ">
+                <textarea id="css-editor" placeholder="Enter CSS code here..." style="border: 1px solid white; border-radius: 5px; background-color: rgba(0, 0, 0, 0.5); color: white; resize: both; padding: 10px; width: 40vw; height: 60vh; overflow: auto"></textarea>
+            </div>
+            <div class="FormSection-row FormSection-row-margin-md" style="padding-top: 10px; margin-top: 16px; margin-left: 32px; padding-left: 0; padding-right: 32px; display: flex; flex-direction: row; flex: 0 0 auto; align-items: center; width: 100%; overflow: auto; border-bottom: 1px solid rgba(163,163,172,.2); padding-bottom: 24px; margin-bottom: 24px;">
+                <button id="Save" class="FormConfirmButtonV2-container FormConfirmButtonV2-container-desktop FormConfirmButtonV2-container-hollow FormConfirmButtonV2-container-default FormConfirmButtonV2-container-size-md FormConfirmButtonV2-container-type-white" style="position: relative; border-color: #fff; border-radius: 4px; border: solid 1px #fff; background: none; box-shadow: none; padding: 7px 16px; display: inline-block; outline: inherit !important; flex-shrink: 0; transition: box-shadow 220ms ease-out, border-color 220ms ease-out, color 220ms ease-out, background-color 220ms ease-out, background-position 220ms ease-out; -webkit-user-select: none; user-select: none; font-family: inherit; font-size: inherit; line-height: inherit; -webkit-appearance: button; cursor: pointer; text-transform: none; overflow: visible; margin: 0px 6px 0px 0px; font: inherit">Save To File</button>
+                <button id="Load" class="FormConfirmButtonV2-container FormConfirmButtonV2-container-desktop FormConfirmButtonV2-container-hollow FormConfirmButtonV2-container-default FormConfirmButtonV2-container-size-md FormConfirmButtonV2-container-type-white" style="position: relative; border-color: #fff; border-radius: 4px; border: solid 1px #fff; background: none; box-shadow: none; padding: 7px 16px; display: inline-block; outline: inherit !important; flex-shrink: 0; transition: box-shadow 220ms ease-out, border-color 220ms ease-out, color 220ms ease-out, background-color 220ms ease-out, background-position 220ms ease-out; -webkit-user-select: none; user-select: none; font-family: inherit; font-size: inherit; line-height: inherit; -webkit-appearance: button; cursor: pointer; text-transform: none; overflow: visible; margin: 0px 6px; font: inherit">Load File</button>
+                <button id="apply" class="FormConfirmButtonV2-container FormConfirmButtonV2-container-desktop FormConfirmButtonV2-container-hollow FormConfirmButtonV2-container-default FormConfirmButtonV2-container-size-md FormConfirmButtonV2-container-type-white" style="position: relative; border-color: #fff; border-radius: 4px; border: solid 1px #fff; background: none; box-shadow: none; padding: 7px 16px; display: inline-block; outline: inherit !important; flex-shrink: 0; transition: box-shadow 220ms ease-out, border-color 220ms ease-out, color 220ms ease-out, background-color 220ms ease-out, background-position 220ms ease-out; -webkit-user-select: none; user-select: none; font-family: inherit; font-size: inherit; line-height: inherit; -webkit-appearance: button; cursor: pointer; text-transform: none; overflow: visible; margin: 0px 6px; font: inherit">Apply CSS</button>
+                <button id="Clear" class="FormConfirmButtonV2-container FormConfirmButtonV2-container-desktop FormConfirmButtonV2-container-hollow FormConfirmButtonV2-container-default FormConfirmButtonV2-container-size-md FormConfirmButtonV2-container-type-white" style="position: relative; border-color: #fff; border-radius: 4px; border: solid 1px #fff; background: none; box-shadow: none; padding: 7px 16px; display: inline-block; outline: inherit !important; flex-shrink: 0; transition: box-shadow 220ms ease-out, border-color 220ms ease-out, color 220ms ease-out, background-color 220ms ease-out, background-position 220ms ease-out; -webkit-user-select: none; user-select: none; font-family: inherit; font-size: inherit; line-height: inherit; -webkit-appearance: button; cursor: pointer; text-transform: none; overflow: visible; margin: 0px 6px; font: inherit">Clear CSS</button>
+                <button id="Live" class="FormConfirmButtonV2-container FormConfirmButtonV2-container-desktop FormConfirmButtonV2-container-hollow FormConfirmButtonV2-container-default FormConfirmButtonV2-container-size-md FormConfirmButtonV2-container-type-white" style="position: relative; border-color: #fff; border-radius: 4px; border: solid 1px #fff; background: none; box-shadow: none; padding: 7px 16px; display: inline-block; outline: inherit !important; flex-shrink: 0; transition: box-shadow 220ms ease-out, border-color 220ms ease-out, color 220ms ease-out, background-color 220ms ease-out, background-position 220ms ease-out; -webkit-user-select: none; user-select: none; font-family: inherit; font-size: inherit; line-height: inherit; -webkit-appearance: button; cursor: pointer; text-transform: none; overflow: visible; margin: 0px 0px 0px 6px; font: inherit; background-color: rgba(255, 0, 0, 0.5)">Live: OFF</button>
+            </div>
+            <div class="FormSection-section-header" style="font-size: 14px; line-height: 19px; color: #ececee; font-weight: bold; -webkit-user-select: none; user-select: none; color: #fff; margin-left: 32px; padding-left: 0; padding-right: 32px;">
+                <span>Recently Opened:</span>
+            </div>
+            <div class="FormSection-row FormSection-row-margin-md" style="padding-top: 10px; margin-top: 16px; margin-left: 32px; padding-left: 0 ; padding-right: 32px; display: flex; flex-direction: row; flex: 0 0 auto; align-items: center; width: 100%; overflow: auto;">
+                <ul id="recentFilesList" style="overflow-y: auto; max-height: 60vh;"></ul>
+            </div>
         </div>
-      </div>
-  
-      <div id="recentFilesContainer" style="width: 50%;">
-        <div class="FormHeader-container Form-header" style="padding-left: 32px; padding-right: 32px; margin-bottom: 12px; font-size: 15px; line-height: 21px; color: #fff; user-select: none">Recently Opened:</div>
-        <ul id="recentFilesList" style="padding-left: 32px; padding-right: 32px; overflow-y: auto; max-height: 60vh;"></ul>
-      </div>
-  
     </div>
-  </div>
-  `;
+</div>`;
 
     // Load recently opened files from localStorage
     const recentFiles = JSON.parse(localStorage.getItem("recentFiles")) || [];
