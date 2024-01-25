@@ -10,11 +10,11 @@
 
 ### Themes
 
-Install and extract the ZIP file for the theme you want from [here](https://github.com/skyallaround/levguilded/releases) and add the folder into `users/you/AppData/roaming/.reguilded/themes` (on windows).
+Install and extract the ZIP file for the theme you want from [here](https://github.com/levisurely/levguilded/releases) and add the folder into `users/you/AppData/roaming/.reguilded/themes` (on windows).
 
 ### Addons
 
-Install and extract the ZIP file for the addon you want from [here](https://github.com/skyallaround/levguilded/releases) and add the folder into `users/you/AppData/roaming/.reguilded/addons` (on windows).
+Install and extract the ZIP file for the addon you want from [here](https://github.com/levisurely/levguilded/releases) and add the folder into `users/you/AppData/roaming/.reguilded/addons` (on windows).
 
 ## Uninstallation
 
@@ -28,29 +28,29 @@ Delete the source folder in `users/you/AppData/roaming/.reguilded/addons` (on wi
 
 # Themes
 
-## [Reguilded-Circle-Icons](https://github.com/skyallaround/levguilded/tree/main/Circle%20Icons)
+## [Reguilded-Circle-Icons](https://github.com/levisurely/levguilded/tree/main/Circle%20Icons)
 
 Replaces the lame rounded square server icons with circles! Kinda to give off a cool discord vibe lol.
 
 # Addons
 
-## [Link Banner](https://github.com/skyallaround/levguilded/tree/main/Link%20Banner)
+## [Link Banner](https://github.com/levisurely/levguilded/tree/main/Link%20Banner)
 
 When You Click on a Banner or Profile Picture in a server or profile it copies it for you
 
-## [Edit Anywhere](https://github.com/skyallaround/levguilded/tree/main/Edit%20Anywhere)
+## [Edit Anywhere](https://github.com/levisurely/levguilded/tree/main/Edit%20Anywhere)
 
 Allows you to edit any text on the webpage!
 
-## [Server Counter](https://github.com/skyallaround/levguilded/tree/main/Server%20Counter)
+## [Server Counter](https://github.com/levisurely/levguilded/tree/main/Server%20Counter)
 
 Puts a counter that shows how many servers you're in!
 
-## [Conceal Filenames](https://github.com/skyallaround/levguilded/blob/main/Conceal%20Filenames)
+## [Conceal Filenames](https://github.com/levisurely/levguilded/blob/main/Conceal%20Filenames)
 
 Replace the names of files you upload!
 
-## [CSS Editor](https://github.com/skyallaround/levguilded/tree/main/CSS%20Editor)
+## [CSS Editor](https://github.com/levisurely/levguilded/tree/main/CSS%20Editor)
 
 Gives you the ability to edit CSS!
 

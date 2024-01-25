@@ -1,18 +1,10 @@
-var Toggle = false;
-
-var Alr = 5000;
 module.exports = {
   load() {
-    setTimeout(function () {
-      Alr = 0;
+    Toa();
+    Upd();
+    console.log("Levi's Utilities Loaded!");
+
     if (typeof Toastify !== "undefined") {
-      Toggle = true;
-      if (sessionStorage.getItem("previousUrl")) {
-        //sessionStorage.removeItem("previousUrl");
-      }
-      if (document.getElementById("inappbtn")) {
-        document.getElementById("inappbtn").remove();
-      }
       const metadata = require(`./metadata.json`);
       metadata.then(function (result) {
         Toastify({
@@ -24,25 +16,23 @@ module.exports = {
           },
         }).showToast();
       });
-    } else {
-      Overlay(
-        "Sky's Utilities Addon Is Required For This Addon To Run!",
-        "https://github.com/skyallaround/levguilded/releases/download/Stuff/Sky.s.Utilities.zip"
-      );
-      this.unload;
-      //return false;
     }
-  }, Alr);
+  },
+  init() {
+    Toa();
+    Upd();
+    console.log("Levi's Utilities Init!");
+    Toastify({
+      text: `Injected ${result.name} ${result.version}!`,
+      duration: 3000,
+      destination: "https://www.guilded.gg/i/2yenj7K2",
+      style: {
+        background: "linear-gradient(to right, #bb4dff, #dda6ff)",
+      },
+    }).showToast();
   },
   unload() {
-    Toggle = false;
-    if (sessionStorage.getItem("previousUrl")) {
-      //sessionStorage.removeItem("previousUrl");
-    }
-    if (document.getElementById("inappbtn")) {
-      document.getElementById("inappbtn").remove();
-    }
-    //window.location.href = "https://www.guilded.gg/";
+    console.log("Levi's Utilities Unloaded!");
     if (typeof Toastify !== "undefined") {
       const metadata = require(`./metadata.json`);
       metadata.then(function (result) {
@@ -59,15 +49,73 @@ module.exports = {
   },
 };
 
-async function Overlay(Text, Link) {
-  if (document.getElementById("Neededoverlay")) {
-    document.getElementById("Neededoverlay").remove();
+async function Check4Upd(url) {
+  try {
+    const response = await fetch(url, { mode: "cors" });
+    if (!response.ok) {
+      throw new Error("Failed to fetch the Raw content");
+    }
+    const content = await response.text();
+    return content;
+  } catch (error) {
+    console.error(error);
   }
-  if (!document.getElementById("Neededoverlay")) {
+}
+
+var UpdLog = [];
+
+async function Upd() {
+  const strings = [
+    "Levi's Utilities",
+    "Server Counter",
+    "Open In App",
+    "Link Banner",
+    "Edit Anywhere",
+    "CSS Editor",
+    "Conceal Filenames",
+    "Character Counter",
+    "1st Letter Capitalized",
+  ];
+
+  strings.forEach((string) => {
+    //setTimeout(function () {
+    const metadata = require(`../${string}/metadata.json`);
+
+    metadata.then(function (result) {
+      const url = new URL(`${result.repoUrl}`);
+      const path = decodeURIComponent(url.pathname.split("/").pop());
+      const thingy = `https://raw.githubusercontent.com/levisurely/levguilded/main/${path}/metadata.json`;
+      Check4Upd(thingy).then((rawContent) => {
+        const RawVer = JSON.parse(rawContent).version;
+        if (result.version !== RawVer) {
+          UpdLog.push(`${string}`);
+          console.log(
+            `UPDATE NEEDED OF ${string}! [YOURS: ${result.version} -> CURRENT: ${RawVer}]`
+          );
+          Overlay(
+            `UPDATE NEEDED OF ${string}! [YOURS: ${result.version} -> CURRENT: ${RawVer}]`,
+            `https://github.com/levisurely/levguilded/releases/tag/Stuff`
+          );
+        } else {
+          console.log(
+            `YOU'RE RUNNING THE NEWEST VERISON OF ${string}! [YOURS: ${result.version} -> CURRENT: ${RawVer}]`
+          );
+        }
+      });
+    });
+    //}, 5000);
+  });
+}
+
+async function Overlay(Text, Link) {
+  if (document.getElementById("Updoverlay")) {
+    document.getElementById("Updoverlay").remove();
+  }
+  if (!document.getElementById("Updoverlay")) {
     // Create the overlay element
     const overlay = document.createElement("div");
-        overlay.style.position = "fixed";
-    overlay.id = "Neededoverlay";
+    overlay.style.position = "fixed";
+    overlay.id = "Updoverlay";
     overlay.style.top = "50%";
     overlay.style.left = "50%";
     overlay.style.transform = "translate(-50%, -50%)";
@@ -136,58 +184,30 @@ async function Overlay(Text, Link) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  var backButton = document.createElement("button");
-  backButton.id = "inappbtn";
-  backButton.innerText = "Back";
-
-  backButton.style.position = "fixed";
-  backButton.style.top = "10px";
-  backButton.style.left = "10px";
-  backButton.style.background = "rgba(0, 0, 0, 0.5)";
-  backButton.style.color = "white";
-  backButton.style.border = "none";
-  backButton.style.padding = "10px 20px";
-  backButton.style.cursor = "pointer";
-
-  document.body.appendChild(backButton);
-  if (Toggle == true) {
-    var links = document.links;
-    for (var i = 0; i < links.length; i++) {
-      links[i].addEventListener("click", function (event) {
-        sessionStorage.setItem("previousUrl", window.location.href);
-        event.preventDefault();
-
-        var href = target.getAttribute("href");
-
-        if (Toggle == true) {
-          window.location.href = href;
-        }
-      });
-    }
-
-    if (sessionStorage.getItem("previousUrl")) {
-      backButton.style.display = "block";
-    }
-
-    backButton.addEventListener("click", function () {
-      var previousUrl = sessionStorage.getItem("previousUrl");
-
-      window.location.href = previousUrl;
-    });
+function Toa() {
+  if (!document.getElementById("toastifycss")) {
+    const stylesheet = document.createElement("link");
+    stylesheet.setAttribute(
+      "href",
+      "https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    );
+    stylesheet.setAttribute("rel", "stylesheet");
+    stylesheet.setAttribute("type", "text/css");
+    stylesheet.setAttribute("id", "toastifycss");
+    document.head.appendChild(stylesheet);
   }
-});
-
-document.addEventListener("click", function (event) {
-  var target = event.target;
-
-  if (target.tagName.toLowerCase() === "a") {
-    event.preventDefault();
-
-    var href = target.getAttribute("href");
-
-    if (Toggle == true) {
-      window.location.href = href;
-    }
+  if (!document.getElementById("toastifyscript")) {
+    const script = document.createElement("script");
+    script.setAttribute("src", "https://cdn.jsdelivr.net/npm/toastify-js");
+    script.setAttribute("type", "text/javascript");
+    script.setAttribute("async", "");
+    script.setAttribute("id", "toastifyscript");
+    script.onload = function handleScriptLoaded() {
+      //console.log("script has loaded!");
+    };
+    script.onerror = function handleScriptError() {
+      console.log("error loading Levi's Utilities");
+    };
+    document.head.appendChild(script);
   }
-});
+}

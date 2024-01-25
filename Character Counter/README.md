@@ -1,1 +1,0 @@
-Hey! This is What a named "Counter Counter"! Puts a counter that shows how many characters are in the m essage box!"

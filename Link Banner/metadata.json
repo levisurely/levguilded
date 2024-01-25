@@ -4,8 +4,8 @@
     "description": "Links the banner when you click on one in a user's popout!",
     "author": "40k9RRKA",
     "contributors": [],
-    "version": "1.0.4",
-    "repoUrl": "https://github.com/skyallaround/levguilded/tree/main/Link%20Banner",
+    "version": "1.0.5",
+    "repoUrl": "https://github.com/levisurely/levguilded/tree/main/Link%20Banner",
     "files": "Script.js",
     "banner": "./Yes.png",
     "images": ["./Yes.png"]

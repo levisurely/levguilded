@@ -4,8 +4,8 @@
     "description": "Replace the names of files you upload!",
     "author": "40k9RRKA",
     "contributors": [],
-    "version": "1.0.4",
-    "repoUrl": "https://github.com/skyallaround/levguilded/tree/main/Conceal%20Filenames",
+    "version": "1.0.5",
+    "repoUrl": "https://github.com/levisurely/levguilded/tree/main/Conceal%20Filenames",
     "files": "Script.js",
     "banner": "./Yes.png",
     "images": ["./Yes.png"]

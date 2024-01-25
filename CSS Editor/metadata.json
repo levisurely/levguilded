@@ -4,8 +4,8 @@
     "description": "Give you the ability to edit CSS!",
     "author": "40k9RRKA",
     "contributors": ["kdKjQl54"],
-    "version": "1.2.1",
-    "repoUrl": "https://github.com/skyallaround/levguilded/tree/main/CSS%20Editor",
+    "version": "1.2.2",
+    "repoUrl": "https://github.com/levisurely/levguilded/tree/main/CSS%20Editor",
     "files": "Script.js",
     "banner": "./Yes.png",
     "images": ["./Yes.png"]

@@ -1,0 +1,12 @@
+{
+    "id": "LeviUtil",
+    "name": "Levi's Utilities",
+    "description": "Utilities to make the plugins Levi made work.",
+    "author": "40k9RRKA",
+    "contributors": [],
+    "version": "1.0.3",
+    "repoUrl": "https://github.com/levisurely/levguilded/tree/main/Levi's%20Utilities",
+    "files": "Script.js",
+    "banner": "./Yes.png",
+    "images": ["./Yes.png"]
+}

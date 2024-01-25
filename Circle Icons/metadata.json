@@ -4,8 +4,8 @@
     "description": "Replaces the lame rounded square server icons with circles!",
     "author": "40k9RRKA",
     "contributors": [],
-    "version": "1.0.4",
-    "repoUrl": "https://github.com/skyallaround/levguilded/tree/main/Circle%20Icons",
+    "version": "1.0.5",
+    "repoUrl": "https://github.com/levisurely/levguilded/tree/main/Circle%20Icons",
     "files": "Icons.css",
     "banner": "./Yes.png",
     "images": ["./Yes.png"]

@@ -4,8 +4,8 @@
     "description": "Puts a counter that shows how many servers you're in!",
     "author": "40k9RRKA",
     "contributors": [],
-    "version": "1.0.4",
-    "repoUrl": "https://github.com/skyallaround/levguilded/tree/main/Server%20Counter",
+    "version": "1.0.5",
+    "repoUrl": "https://github.com/levisurely/levguilded/tree/main/Server%20Counter",
     "files": "Script.js",
     "banner": "./Yes.png",
     "images": ["./Yes.png"]

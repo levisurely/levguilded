@@ -1,1 +1,0 @@
-This will allow you to just type without having to use the Shift Key EACH time you start a new sentence.

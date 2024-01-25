@@ -19,8 +19,8 @@ module.exports = {
       });
     } else {
       Overlay(
-        "Sky's Utilities Addon Is Required For This Addon To Run!",
-        "https://github.com/skyallaround/levguilded/releases/download/Stuff/Sky.s.Utilities.zip"
+        "Levi's Utilities Addon Is Required For This Addon To Run!",
+        "https://github.com/levisurely/levguilded/releases/download/Stuff/Levi.s.Utilities.zip"
       );
       this.unload;
       //return false;
