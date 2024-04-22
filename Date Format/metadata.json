@@ -1,0 +1,13 @@
+{
+    "id": "DateFormat",
+    "name": "Date Format",
+    "description": "Gives you the change the format of dates!",
+    "author": "40k9RRKA",
+    "contributors": ["m6YxwpQd"],
+    "version": "1.0.0",
+    "repoUrl": "https://github.com/skyallaround/levguilded/tree/main/Date%20Format",
+    "files": "Script.js",
+    "Format": "DD/MM/YYYY",
+    "banner": "./Yes.png",
+    "images": ["./Yes.png"]
+}

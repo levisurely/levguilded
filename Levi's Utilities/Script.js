@@ -68,13 +68,11 @@ async function Upd() {
   const strings = [
     "Levi's Utilities",
     "Server Counter",
-    "Open In App",
     "Link Banner",
     "Edit Anywhere",
     "CSS Editor",
     "Conceal Filenames",
-    "Character Counter",
-    "1st Letter Capitalized",
+    "Date Format",
   ];
 
   strings.forEach((string) => {
